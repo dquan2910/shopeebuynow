@@ -1,0 +1,287 @@
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="function.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+    <body style="padding-left: 10px; padding-right: 10px;">
+        <div style="padding-top: 15px;">
+            <button type="submit" style="width: 49%; font-size: 15px; font-weight: bold; background-color: #fe5723; height: 40px" class="btn btn-primary" onclick="createJavascript()">
+                <img src="https://finatech.s3.ap-southeast-1.amazonaws.com/20220929/18598389/Shopee.jpg" style="margin-bottom: 6px" width="28px" /><span>TẠO SCRIPT</span>
+            </button>
+            <button type="submit" style="width: 49%; font-size: 15px; font-weight: bold; background-color: #04AA6D;; height: 40px" class="btn btn-primary" onclick="listLink()">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/014/441/438/small_2x/list-icon-3d-design-for-application-and-website-presentation-png.png" style="margin-bottom: 2px; margin-right: 2px;" width="30px" /><span>LIST CÓ SẴN</span>
+            </button>
+        </div>
+        <div style="justify-content: center; padding-top: 10px">
+        <span id="title" style="font-weight: bold; font-size: 19px;">Link sản phẩm dài:</span>
+        <br>
+        <textarea id="productLink" style="margin-bottom: 12px;"></textarea>
+        <div id="selectList" style="display: none;">
+            <select id ="selectedItem" style="width: 100%; font-size: 15px; height: 30px">
+                <option value="">--Chọn sản phẩm--</option>
+                <option value="https://shopee.vn/marketplace-checkout?cartType=1&cid=5&orders=%5B%7B%22shop%22%3A%7B%22shopid%22%3A848738314%7D%2C%22items%22%3A%5B%7B%22itemid%22%3A27069665259%2C%22modelid%22%3A223545887363%2C%22quantity%22%3A" style="color: #da3232;">Skull Noel OFFICIAL</option>
+                <option value="https://shopee.vn/marketplace-checkout?cartType=1&cid=5&orders=%5B%7B%22shop%22%3A%7B%22shopid%22%3A848738314%7D%2C%22items%22%3A%5B%7B%22itemid%22%3A25123620593%2C%22modelid%22%3A222676694388%2C%22quantity%22%3A" style="color: #878383;">Cúc nhỏ OFFICIAL</option>
+                <option value="https://shopee.vn/marketplace-checkout?cartType=1&cid=5&orders=%5B%7B%22shop%22%3A%7B%22shopid%22%3A848738314%7D%2C%22items%22%3A%5B%7B%22itemid%22%3A28212254597%2C%22modelid%22%3A197832478596%2C%22quantity%22%3A" style="color: #ff8000;">Bí OFFICIAL</option>
+                <option value="https://shopee.vn/marketplace-checkout?cartType=1&cid=5&orders=%5B%7B%22shop%22%3A%7B%22shopid%22%3A1018372499%7D%2C%22items%22%3A%5B%7B%22itemid%22%3A27012678264%2C%22modelid%22%3A215426921585%2C%22quantity%22%3A" style="color: #ff8000;">Bí LOCAL</option>
+                <option value="https://shopee.vn/marketplace-checkout?cartType=1&cid=5&orders=%5B%7B%22shop%22%3A%7B%22shopid%22%3A848738314%7D%2C%22items%22%3A%5B%7B%22itemid%22%3A25536582862%2C%22modelid%22%3A197844150932%2C%22quantity%22%3A" style="color: #ca03fc;">Tím nhỏ OFFICIAL</option>
+                <option value="https://shopee.vn/marketplace-checkout?cartType=1&cid=5&orders=%5B%7B%22shop%22%3A%7B%22shopid%22%3A1018372499%7D%2C%22items%22%3A%5B%7B%22itemid%22%3A27315382438%2C%22modelid%22%3A233371590575%2C%22quantity%22%3A" style="color: #ca03fc;">Tím nhỏ LOCAL</option>
+                <option value="https://shopee.vn/marketplace-checkout?cartType=1&cid=5&orders=%5B%7B%22shop%22%3A%7B%22shopid%22%3A848738314%7D%2C%22items%22%3A%5B%7B%22itemid%22%3A27112689498%2C%22modelid%22%3A223273178515%2C%22quantity%22%3A" style="color: #b50ddf;">Tím lớn OFFICIAL</option>
+                <option value="https://shopee.vn/marketplace-checkout?cartType=1&cid=5&orders=%5B%7B%22shop%22%3A%7B%22shopid%22%3A1018372499%7D%2C%22items%22%3A%5B%7B%22itemid%22%3A28315382859%2C%22modelid%22%3A223371686727%2C%22quantity%22%3A" style="color: #b50ddf;">Tím lớn LOCAL</option>
+                <option value="https://shopee.vn/marketplace-checkout?cartType=1&cid=5&orders=%5B%7B%22shop%22%3A%7B%22shopid%22%3A1018372499%7D%2C%22items%22%3A%5B%7B%22itemid%22%3A29307360599%2C%22modelid%22%3A147410327440%2C%22quantity%22%3A" style="color: #a7bbcf;">Set V1 LOCAL</option>
+                <option value="https://shopee.vn/marketplace-checkout?cartType=1&cid=5&orders=%5B%7B%22shop%22%3A%7B%22shopid%22%3A1018372499%7D%2C%22items%22%3A%5B%7B%22itemid%22%3A29757358989%2C%22modelid%22%3A207708320944%2C%22quantity%22%3A" style="color: #fed58a;">Set V2 OFFICIAL</option>
+            </select>       
+        </div>     
+        <div style="padding-bottom: 12px; font-size: 15px;">
+        <span style="font-weight: bold; font-size: 19px;">Số lượng:</span>
+        <input type="number" id="quantity"  min="1" max="99"  style="max-width: 15%;">
+        <span>(Không nhập mặc định là 1)</span>
+        </div>
+        <div style="width: 100%; padding-top: 10px; text-align: center">
+        <button id="changeList" type="submit" style="width: 49%; font-size: 15px; font-weight: bold" class="btn btn-primary" onclick="changeLink()">CHUYỂN ĐỔI</button>
+        <button id="changeItem" type="submit" style="width: 49%; font-size: 15px; font-weight: bold; display: none;" class="btn btn-primary" onclick="changeItem()">CHUYỂN ĐỔI</button>
+        <button type="submit" style="width: 49%; font-size: 15px; font-weight: bold" class="btn btn-danger" onclick="reset()">RESET</button>
+    </div>
+        <div style="padding-top: 3%;">
+            <span id="result" style="font-weight: bold; font-size: 19px;">Javascript:</span>
+        </div>
+        <textarea id="finalLink"readonly></textarea>
+        <p id="thongbaoLink" style="color: red; font-weight: bold; text-align: center; max-height:2%;">&nbsp;</p>
+        <button style="width: 100%; font-size: 15px; font-weight: bold; background-color: #ca03fc" class="btn btn-success" onclick="copyLink()">COPY</button>
+        </a>
+        </div>
+        </body>
+    <style>
+        textarea
+        {
+            width: 100%;
+            height: 150px;
+            box-sizing: border-box;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            resize: none;
+        }
+    </style>
+    <script>
+        var inputBox = document.getElementById("quantity");
+        var invalidChars = [
+        "-",
+        "+",
+        "e",
+        ];
+        inputBox.addEventListener("keydown", function(e) {
+        if (invalidChars.includes(e.key)) {
+        e.preventDefault();}});
+        inputBox.oninput = function () {
+            if (this.value > 99) {
+                this.value = 99; 
+            }
+        }
+    </script>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+        <title>Form D</title>
+        <style type="text/css">
+            body {
+                font-family: "Times New Roman", Times, serif;
+                font-size: 10pt;
+            }
+    
+            table {
+                margin: 0 auto;
+                border-collapse: collapse;
+                padding-top: 5px;
+                padding-bottom: 5px;
+                font-family: "Times New Roman", Times, serif;
+                font-size: 10pt;
+            }
+    
+            table th {
+                text-align: center;
+            }
+    
+            table th,
+            table td {
+                vertical-align: center-left;
+            }
+    
+            .tableContent {
+                width: 100%;
+                border-collapse: collapse;
+                border: 2px solid;
+            }
+    
+    
+            .tableContent th,
+            .tableContent td {
+                padding: 1px;
+                border: 1px solid gray;
+            }
+    
+            .content3 {
+                vertical-align: text-top;
+                text-align: left;
+    
+            }
+    
+    
+            .header {
+                width: 100%;
+                margin-bottom: 50px;
+            }
+    
+            .sectionGuide {
+                padding: 0;
+                width: 100%;
+            }
+    
+            #my-div {
+                width: 10px;
+                height: 10px;
+                background: blue;
+            }
+    
+            .pagebreak {
+                page-break-before: always;
+            }
+    
+            .footer {
+                position: absolute;
+                z-index: 10;
+                height: 3em;
+                margin-top: 3em;
+            }
+    
+            .sup {
+                position: relative;
+                vertical-align: baseline;
+                top: -0.5em;
+                font-size: 8pt;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <div class="sectionGuide">
+            <div style="width: 50%; align-items:center;">
+                <table class="tableContent" style="margin-top: 7px;">
+                    <tr>
+                        <th rowspan="4" width="70%" style="text-align: center;">Application on Organization/Position/Manpower  <br />
+                            組織・役職ポスト・要員に関する申請書 <br />
+                           
+                        </th>
+                    </tr>
+                    <tr>
+                        <td width="15%" style="text-align: left;">Applying Date</td>
+                        <td width="15%" style="text-align: center;"></td>
+                    </tr>
+                    <tr>
+                        <td width="15%" style="text-align: left;">Applied No.</td>
+                        <td width="15%" style="text-align: center;"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: left; empty-cells: show; height: 15px;"></td>
+                        <td width="15%" style="text-align: center;">
+    
+                        </td>
+                    </tr>
+                </table>
+                <table class="tableContent">
+                    <tr>
+                        <td rowspan="4" width="1%" style="text-align: center;">決裁</td>
+                        <td rowspan="4" style="writing-mode: vertical-lr; text-align: center;">Decision</td>
+                    </tr>
+                    <tr style="height: 30px;">
+                        <th tyle="text-align: center;">Management</th>
+                        <th colspan="4" style="text-align: center;">Relevant Division (if any)</th>
+                        <th colspan="4" style="text-align: center;">Applying Division / Department</th>
+                    </tr>
+                    <tr style="height: 40px;">
+     
+                        <td style="text-align: center;"><b>GD</b></td>
+    
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <th>Executive Manager</th>
+                        <th>Senior Manager</th>
+                        <th>Manager / Dep. Manager</th>
+                    </tr>
+                    <tr style="height: 40px;">
+                       <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+                <table class="tableContent">
+                    <tr>
+                        <td rowspan="3" style="height: 60px; ">
+                            Conditions <br />
+                            (承認条件)
+                        </td>
+                        <td rowspan="3" style="width: 50%;"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">Division <br />
+                            (作成部署)</td>
+                        <td style="width: 30%;">
+                          
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: center;">Maker<br />
+                            (作成者)</td>
+                        <td></td>
+                    </tr>
+    
+                </table>
+                <table class="tableContent">
+                    <tr>
+                      
+                        <td style="width: 1%;">件名</td>
+                        <td style="writing-mode: vertical-lr; text-align: center;">Subject</td>
+                        <td style="width: 400px;"></td>
+                        <td style=" flex-direction: column; gap: 4px; width: 50%;">
+                            <p ><input type="checkbox" /> Change in Organization (組織変更)</p>
+                            <p ><input type="checkbox" />Set-up /Change in Job Position (ポスト変更/創設)</p>
+                            <p ><input type="checkbox" /> Manpower (要員)</p>
+                            <p ><input type="checkbox" /> Others () </p>
+                        </td>
+                    </tr>
+                
+                 
+    
+                </table>
+                <table class="tableContent" >
+                    <tr >
+                        <th class="content3" style="border: none; text-align: center; color:darkred;">
+                            # This form can not be used for Individual transfer / Posting.  (本書式は個別人事に使用しない)
+                        </th>
+                    </tr>
+                    <tr style="border: none; text-decoration: underline;">
+                        <th class="content3" style="border: none; height: 200px;">1. Applied Contents </th>
+                        
+                    </tr>
+                    <tr>
+                        <th class="content3" style="border: none; text-decoration: underline; height: 200px;">2. Rationales
+                            for Approval (申請理由)</th>
+                    </tr>
+                    <tr>
+                        <th class="content3" style="border: none; text-decoration: underline; height: 70px;">3. Attachments
+                            (添付資料)</th>
+                    </tr>
+    
+                </table>
+                </div>
+            </div>
+    </body>
