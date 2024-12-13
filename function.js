@@ -41,7 +41,9 @@ function changeLink()
             "  var qty = "+qty+";\n" +
             "  var model_id = data.models[0].model_id;\n" +
             "  var finalLink = \"<textarea id='temp' readonly style='font-size: 25px; width: 100%; height: 200px;'>\" + \"https://shopee.vn/marketplace-checkout?cartType=1&cid=5&orders=%5B%7B%22shop%22%3A%7B%22shopid%22%3A\" +"+shopID+"+ \"%7D%2C%22items%22%3A%5B%7B%22itemid%22%3A\" +"+itemID+"+ \"%2C%22modelid%22%3A\" + model_id + \"%2C%22quantity%22%3A\" + qty + \"%7D%5D%7D%5D\" + \"</textarea>\";\n" +
+            "  var productInfo = '<h1>' + data.name + ' - Số lượng: ' + qty + '</h1>' \n" +
             "  var new_window = window.open('');\n" +
+            "  new_window.document.write(productInfo);\n" +
             "  new_window.document.write(finalLink);\n" +
             "  new_window.document.write(\"<button style=\\\"width: 100%; height: 100px; background-color:#04AA6D; color: white; font-size: 35px;\\\" onclick=\\\"{\\nlet textarea = document.getElementById('temp');\\ntextarea.select();\\ndocument.execCommand('copy');}\\\"> Copy</button>\");\n" +
             "});";
