@@ -92,6 +92,8 @@ function reset()
     document.getElementById("productLink").value = "";
     document.getElementById("finalLink").value = "";
     document.getElementById("thongbaoLink").innerHTML = "";
+    document.getElementById("selectedItem").value = "0";
+    
 }
 function listLink()
 {
