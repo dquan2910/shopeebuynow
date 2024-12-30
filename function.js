@@ -1,6 +1,6 @@
 function changeLink()
 {
-    var auth = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVfdGltZSI6MTczNDMxMzczMywiaWQiOiJlN2FlZDYwMC1iYjRmLTExZWYtOWE0NC05YWFjNWI0MGRkODgifQ.maDNZa4j85NnH2j62Bh3WwIJwjERt252MnTAKkCUjcU";
+    var auth = "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJjcmVhdGVfdGltZSI6MTczNTUyOTY5NiwiaWQiOiIwYTRjODhmMy1jNjVmLTExZWYtODI5ZS0wNjI3MTY2N2FmOGMifQ.fpFrXMfUZ48ErPbzFVrUrKKpxCA8tInemFj3XoW-Z-E";
     var productLink = document.getElementById("productLink").value;
     var finalLink = document.getElementById("finalLink");
     if(productLink == "")
