@@ -10,11 +10,12 @@ function changeLink()
     {
         var posOfTemp = productLink.indexOf("/product/");
         var posOfTemp2 = productLink.indexOf("--i.");
-        if(posOfTemp == -1 && posOfTemp2 == -1)
+        var posOfTemp3 = productLink.indexOf("modelid%22%3A");
+        if(posOfTemp == -1 && posOfTemp2 == -1 && posOfTemp3 == -1)
         {
             document.getElementById("thongbaoLink").innerHTML = "Link chưa đúng, vui lòng coi hướng dẫn";
         }
-        else
+        else if(posOfTemp3 == -1)
         {
             var tempPos, shopID, itemID;
             document.getElementById("thongbaoLink").innerHTML = "";
@@ -83,6 +84,20 @@ function changeLink()
             "});";
             finalLink.value = finalScript;
         }
+        else
+        {
+            document.getElementById("thongbaoLink").innerHTML = "";
+            var qtyraw = document.getElementById("quantity").value;
+            let qty = 1;
+            if(qtyraw != "")
+                qty = parseInt(qtyraw, 10);
+            if(qty < 1)
+                qty = 1;
+            var tempPos = productLink.indexOf("quantity%22%3A");
+            productLink = productLink.substring(0, tempPos+14);
+            finalLink.value = productLink + qty + "%7D%5D%7D%5D";;
+
+        }
 
     }
 }
@@ -142,7 +157,7 @@ function listLink()
 function createJavascript()
 {
     document.getElementById("title").innerHTML = "Link sản phẩm dài:";
-    document.getElementById("result").innerHTML = "Javascript:";
+    document.getElementById("result").innerHTML = "Javascript/Link:";
     document.getElementById("productLink").style.display ='';
     document.getElementById("changeList").style.display =''; 
     document.getElementById("changeItem").style.display ='none';
