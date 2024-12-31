@@ -9,7 +9,7 @@ function changeLink()
     else
     {
         var posOfTemp = productLink.indexOf("/product/");
-        var posOfTemp2 = productLink.indexOf("--i.");
+        var posOfTemp2 = productLink.indexOf("-i.");
         var posOfTemp3 = productLink.indexOf("modelid%22%3A");
         if(posOfTemp == -1 && posOfTemp2 == -1 && posOfTemp3 == -1)
         {
@@ -28,7 +28,7 @@ function changeLink()
             }
             if(posOfTemp2 != -1)
             {
-                productLink = productLink.substring(posOfTemp2 + 4);
+                productLink = productLink.substring(posOfTemp2 + 3);
                 tempPos = productLink.indexOf(".");
                 shopID = productLink.substring(0, tempPos);
                 productLink = productLink.substring(tempPos+1);
