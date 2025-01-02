@@ -47,7 +47,7 @@ function changeLink()
                 qty = parseInt(qtyraw, 10);
             if(qty < 1)
                 qty = 1;
-            var linkScript = "https://dquan2910.github.io/shopeebuynow/script.html?value="+ itemID + "-" + shopID + "-" + qty;
+            var linkScript = "https://dquan2910.github.io/shopeebuynow/script?value="+ itemID + "-" + shopID + "-" + qty;
             var finalScript = "s=document.createElement('script');s.type='text/javascript';s.src='" + linkScript + "';document.head.appendChild(s)"
             if(document.getElementById("finalLink").value.indexOf("s=") == 0)
                 {
