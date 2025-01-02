@@ -49,7 +49,11 @@ function changeLink()
                 qty = 1;
             var linkScript = "https://dquan2910.github.io/shopeebuynow/script.html?value="+ itemID + "-" + shopID + "-" + qty;
             var finalScript = "s=document.createElement('script');s.type='text/javascript';s.src='" + linkScript + "';document.head.appendChild(s)"
-            finalLink.value = finalScript;
+            if(document.getElementById("finalLink").value.indexOf("s=") == 0)
+                {
+                    finalLink = "avascript: " + finalLink
+                }
+                finalLink.value = finalScript;
         }
         else
         {
