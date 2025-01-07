@@ -47,7 +47,7 @@ function changeLink()
                 qty = parseInt(qtyraw, 10);
             if(qty < 1)
                 qty = 1;
-            var finalScript = "fetch('https://dquan2910.github.io/shopeebuynow/testscript.js')\n" +
+            var finalScript = "fetch('https://dquan2910.github.io/shopeebuynow/script.js')\n" +
                             ".then(response => response.text())\n" +
                             ".then(scriptContent => {\n" +
                             "  var finalScript = scriptContent.replace('itemIDTemp', '" + itemID + "')\n" +
